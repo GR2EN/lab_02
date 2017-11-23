@@ -22,9 +22,11 @@ public class CodeCheckerTest {
     public static Collection<Object []> data() {
         Object[][] data = new Object[][] {
                 { "#FF0000", true },
-                { "#ff0000", true },
+                { "#c0c0c0", true },
                 { "#000000", true },
                 { "#eeeeee", true },
+                { "#g1g2g3", false },
+                { "#zzzzzz", false },
                 { "eee", false },
                 { "ff00", false }};
         return Arrays.asList(data);
