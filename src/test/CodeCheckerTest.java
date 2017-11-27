@@ -5,18 +5,16 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.Arrays;
 import java.util.Collection;
 
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 @RunWith(Parameterized.class)
 public class CodeCheckerTest {
     private CodeChecker codeChecker;
-    private String inputString;
-    private boolean testResult;
+    private String mInputString;
+    private boolean mTestResult;
 
     @Parameterized.Parameters
     public static Collection<Object []> data() {
@@ -33,8 +31,8 @@ public class CodeCheckerTest {
     }
 
     public CodeCheckerTest(String inputString, boolean testResult){
-        this.inputString = inputString;
-        this.testResult = testResult;
+        this.mInputString = inputString;
+        this.mTestResult = testResult;
     }
 
     @Before
@@ -44,7 +42,7 @@ public class CodeCheckerTest {
 
     @Test
     public void testCheckThisCode() {
-        boolean val = codeChecker.checkThisCode(inputString);
-        assertEquals(testResult, val);
+        boolean mValue = codeChecker.checkThisCode(mInputString);
+        assertEquals(mTestResult, mValue);
     }
 }

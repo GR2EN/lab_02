@@ -8,8 +8,8 @@ public class Main {
 	    System.out.println("Введите данные:");
 
 	    // Принимаем строку от пользователя
-        Scanner scr = new Scanner(System.in);
-        String inputString = scr.next();
+        Scanner scanner = new Scanner(System.in);
+        String inputString = scanner.next();
 
         // Проверяем на корректность HTML-цвета
         CodeChecker checkObject = new CodeChecker();

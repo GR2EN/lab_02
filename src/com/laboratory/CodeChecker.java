@@ -1,7 +1,7 @@
 package com.laboratory;
 
-import java.util.regex.Pattern;
 import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class CodeChecker {
     public boolean checkThisCode(String inputCode) {
